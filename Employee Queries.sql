@@ -16,8 +16,6 @@ order by salary desc;
 select first_name, last_name, hire_date from employees 
 where to_date(hire_date,'MM/DD/YYYY') between '01/01/1986' and '12/31/1986';
 
-select * from salaries
-
 --List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 select dep1.dept_no, dep.dept_name, dep1.emp_no, e.last_name, e.first_name from dept_manager as dep1
 join department as dep on dep.dept_no = dep1.dept_no
